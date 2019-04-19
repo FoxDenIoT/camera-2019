@@ -17,6 +17,7 @@
    <https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers>
 <img src='res/images/driver.png'>
 6. Connect camera via USB cable and choose your port in Arduino IDE.
+   (Make sure PSRAM is "Enabled").
 <img src='res/images/port.png'>
 7. Compile and run!
 <img src='res/images/run.png'>
