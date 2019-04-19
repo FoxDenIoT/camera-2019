@@ -1,4 +1,5 @@
 # camera-2019, DIY Code
+<img src='res/images/header.jpg'>
 
 ## Usage
 1. Clone or download repository
