@@ -12,8 +12,11 @@
 4. Open `camera-2019.ino`
 <img src='res/images/ide.png'>
 5. Install USB to UART Driver: https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
+<img src='res/images/driver.png'>
 6. Connect camera via USB cable and choose your port in Arduino IDE.
+<img src='res/images/port.png'>
 7. Compile and run!
+<img src='res/images/run.png'>
 
 ## Configuration
 Line 11.
