@@ -14,17 +14,17 @@
 ## Configuration
 Line 11.
 
-``
+```
 //#define SOFTAP_MODE 
-``
+```
 
 Commenting it will connect it to your home router.
 Provide wifi router credentials in lines 17,18
 
-``
+```
 #define WIFI_SSID   ""
 #define WIFI_PASSWD ""
-``
+```
 
 ## Further Reading
 1. AWS Kinesis: https://aws.amazon.com/quickstart/architecture/camera-connector-onica/
