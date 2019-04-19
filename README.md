@@ -1,4 +1,4 @@
-# camera-2019, DIY Code
+# DIY Code
 <img src='res/images/header.jpg'>
 
 ## Usage
