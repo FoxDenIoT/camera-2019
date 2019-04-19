@@ -8,7 +8,9 @@
 <img src='res/images/arduino.png'>
 3. Add this to your boards: https://dl.espressif.com/dl/package_esp32_index.json
     (more instructions: https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md)
+<img src='res/images/aPref.png'>
 4. Open `camera-2019.ino`
+<img src='res/images/ide.png'>
 5. Install USB to UART Driver: https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
 6. Connect camera via USB cable and choose your port in Arduino IDE.
 7. Compile and run!
