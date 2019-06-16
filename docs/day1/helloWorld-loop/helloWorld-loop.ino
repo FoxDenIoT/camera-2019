@@ -23,19 +23,19 @@ void setup()
 
 
     oled.init();
-    oled.setFont(ArialMT_Plain_16);
+    oled.setFont(ArialMT_Plain_24);
     oled.setTextAlignment(TEXT_ALIGN_CENTER);
     delay(50);
 }
 
 void loop(){
     oled.clear();
-    oled.drawString(oled.getWidth() / 2, oled.getHeight() / 2, "HELLO");
+    oled.drawString(oled.getWidth() / 2, oled.getHeight() / 3, "HELLO");
     oled.display();
     delay(1000);
     
     oled.clear();
-    oled.drawString(oled.getWidth() / 2, oled.getHeight() / 2, "WORLD");
+    oled.drawString(oled.getWidth() / 2, oled.getHeight() / 3, "WORLD");
     oled.display();
     delay(1000);
 
