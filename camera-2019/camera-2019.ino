@@ -14,8 +14,8 @@
 //#define ENABLE_BME280
 
 
-#define WIFI_SSID   ""
-#define WIFI_PASSWD ""
+#define WIFI_SSID  "NETGEAR31"
+#define WIFI_PASSWD "fluffywind547"
 
 #define PWDN_GPIO_NUM 26
 #define RESET_GPIO_NUM -1
