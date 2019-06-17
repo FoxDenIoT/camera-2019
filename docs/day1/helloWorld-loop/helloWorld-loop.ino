@@ -9,12 +9,6 @@ SSD1306 oled(SSD1306_ADDRESS, I2C_SDA, I2C_SCL);
 OLEDDisplayUi ui(&oled);
 
 
-
-//FrameCallback frames[] = {drawFrame1, drawFrame2};
-#define FRAMES_SIZE (sizeof(frames) / sizeof(frames[0]))
-
-
-
 void setup()
 {
     Serial.begin(115200);
