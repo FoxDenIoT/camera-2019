@@ -30,12 +30,12 @@ void setup()
 
 void loop(){
     oled.clear();
-    oled.drawString(oled.getWidth() / 2, oled.getHeight() / 3, "HELLO");
+    oled.drawString(oled.getWidth() / 2, 20, "HELLO");
     oled.display();
     delay(1000);
     
     oled.clear();
-    oled.drawString(oled.getWidth() / 2, oled.getHeight() / 3, "WORLD");
+    oled.drawString(oled.getWidth() / 2, 20, "WORLD");
     oled.display();
     delay(1000);
 
