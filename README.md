@@ -6,7 +6,7 @@
 2. Download and install Arduino:
   <https://www.arduino.cc/en/Main/Software>
 <img src='res/images/arduino.png'>
-3. Add this to your boards: <https://dl.espressif.com/dl/package_esp32_index.json>
+3. Add this to your boards: https://dl.espressif.com/dl/package_esp32_index.json
    
    
 
