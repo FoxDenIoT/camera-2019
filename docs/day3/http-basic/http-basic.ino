@@ -7,7 +7,7 @@ const char* password = "";
 WebServer server(80);
 
 void handleRoot() {
-  server.send(200, "text/plain", "hello from esp8266!");
+  server.send(200, "text/plain", "hello from esp32!");
 }
 
 void handleNotFound() {

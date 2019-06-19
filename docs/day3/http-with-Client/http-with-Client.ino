@@ -7,7 +7,7 @@ const char* password = "";
 WebServer server(80);
 
 void handleRoot(int a) {
-  server.send(200, "text/plain", "hello from esp32!");
+      server.send(200, "text/html", "<html><head></head><body><a href=\"./on\">on</a><br><a href=\"./off\">off</a></body><html>");
 }
 
 void handleNotFound() {
@@ -28,7 +28,7 @@ void setup(void) {
   }
 
     
-    server.on("/on", []() {
+    server.on("/onx`", []() {
       handleRoot(1);
     });
 
