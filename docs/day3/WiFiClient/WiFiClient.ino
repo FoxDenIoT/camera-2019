@@ -76,9 +76,16 @@ void loop()
     }
 
     // Read all the lines of the reply from server and print them to Serial
+    int lineno = 1;
     while(client.available()) {
-        String line = client.readStringUntil('\r');
-        Serial.print(line);
+        String line = client.readStringUntil('\r');      
+        if(lineno==4){
+          Serial.println(line);
+          Serial.println(line.substring(12,23));
+          Serial.println(line.substring(24));
+        }
+        
+        lineno++;
     }
 
     Serial.println();
