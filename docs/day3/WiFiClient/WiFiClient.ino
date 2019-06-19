@@ -57,7 +57,7 @@ void loop()
     }
 
     // We now create a URI for the request
-    String url = "/"
+    String url = "/";
 
     Serial.print("Requesting URL: ");
     Serial.println(url);
