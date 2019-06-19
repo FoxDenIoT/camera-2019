@@ -17,7 +17,7 @@ void handleRoot(int a) {
 }
 
 void handleNotFound() {
-  server.send(200, "text/plain", "404 Error");
+  server.send(404, "text/plain", "404 Error");
 }
 
 void setup(void) {
