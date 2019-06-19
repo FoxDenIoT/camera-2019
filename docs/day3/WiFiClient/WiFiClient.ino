@@ -14,7 +14,7 @@ void setup()
     delay(10);
 
     // We start by connecting to a WiFi network
-    WiFiMulti.addAP("SSID", "passpasspass");
+    WiFiMulti.addAP("Tejaswi3", "12345678");
 
     Serial.println();
     Serial.println();
@@ -57,9 +57,20 @@ void loop()
     // This will send the request to the server
     client.print("Send this data to server");
 
-    //read back one line from server
-    String line = client.readStringUntil('\r');
-    client.println(line);
+    while (client.connected()) {
+      String line = client.readStringUntil('\n');
+      if (line == "\r") {
+        Serial.println("headers received");
+        break;
+      }
+    }
+    // if there are incoming bytes available
+    // from the server, read them and print them:
+    while (client.available()) {
+      char c = client.read();
+      Serial.write(c);
+    }
+    
 
     Serial.println("closing connection");
     client.stop();
