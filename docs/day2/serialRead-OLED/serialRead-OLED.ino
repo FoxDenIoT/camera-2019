@@ -35,6 +35,7 @@ void loop() {
             Serial.print("Message received: ");
             Serial.print(inData);
             oled.clear();
+            oled.setTextAlignment(TEXT_ALIGN_CENTER);
             oled.drawString(oled.getWidth() / 2, oled.getHeight() / 2, inData);
             oled.display();
 
