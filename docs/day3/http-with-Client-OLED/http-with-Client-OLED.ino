@@ -20,7 +20,8 @@ WebServer server(80);
 void handleRoot(int a) {
   if(a == 1){
     // set screen to say "OPEN"
-        oled.setFont(ArialMT_Plain_16);
+    oled.clear();
+    oled.setFont(ArialMT_Plain_16);
     oled.setTextAlignment(TEXT_ALIGN_CENTER);
     delay(50);
     oled.drawString(oled.getWidth() / 2, oled.getHeight() / 2, "OPEN");
@@ -28,6 +29,7 @@ void handleRoot(int a) {
   }
   else{
     //set screen to say "CLOSED"
+    oled.clear();
     oled.setFont(ArialMT_Plain_16);
     oled.setTextAlignment(TEXT_ALIGN_CENTER);
     delay(50);
