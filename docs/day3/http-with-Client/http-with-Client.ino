@@ -1,7 +1,7 @@
 #include <WiFi.h>
 #include <WebServer.h>
 
-const char* ssid = "test";
+const char* ssid = "test1234";
 const char* password = "";
 
 WebServer server(80);
@@ -17,7 +17,7 @@ void handleNotFound() {
 void setup(void) {
   Serial.begin(115200);
   WiFi.mode(WIFI_AP);
-  IPAddress apIP = IPAddress(1, 1, 1, 1);
+  IPAddress apIP = IPAddress(2, 2, 2, 2);
   WiFi.softAPConfig(apIP, apIP, IPAddress(255, 255, 255, 0));
   char buff[128];
   sprintf(buff, "%s", ssid);
@@ -28,7 +28,7 @@ void setup(void) {
   }
 
     
-    server.on("/onx`", []() {
+    server.on("/on", []() {
       handleRoot(1);
     });
 
