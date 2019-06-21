@@ -5,13 +5,16 @@ const char* ssid = "test1234";
 const char* password = "";
 
 WebServer server(80);
+#define LED_PIN 21
 
 void handleRoot(int a) {
   if(a == 1){
     // turn on led
+    digitalWrite(LED_PIN, HIGH);
   }
   else{
     //turn off led
+    digitalWrite(LED_PIN, LOW);
   }
       server.send(200, "text/html", "<html><head></head><body><a href=\"./on\">on</a><br><a href=\"./off\">off</a></body><html>");
 }
@@ -33,6 +36,7 @@ void setup(void) {
       while (1);
   }
 
+    pinMode(LED_PIN, OUTPUT);
     
     server.on("/on", []() {
       handleRoot(1);
