@@ -14,8 +14,8 @@
 //#define ENABLE_BME280
 
 
-#define WIFI_SSID  "Cartel Guest"
-#define WIFI_PASSWD "Espresso"
+#define WIFI_SSID  ""
+#define WIFI_PASSWD ""
 
 #define PWDN_GPIO_NUM 26
 #define RESET_GPIO_NUM -1

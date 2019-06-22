@@ -6,15 +6,19 @@ const char* password = "";
 
 WebServer server(80);
 static const uint8_t LED_PIN = 21;
+static const uint8_t LED_PIN1 = 22;
+
 
 void handleRoot(int a) {
   if(a == 1){
     // turn on led
     digitalWrite(LED_PIN, HIGH);
+    digitalWrite(LED_PIN1, LOW);
   }
   else{
     //turn off led
     digitalWrite(LED_PIN, LOW);
+    digitalWrite(LED_PIN1, HIGH);
   }
       server.send(200, "text/html", "<html><head></head><body><a href=\"./on\">on</a><br><a href=\"./off\">off</a></body><html>");
 }
@@ -37,6 +41,7 @@ void setup(void) {
   }
 
     pinMode(LED_PIN, OUTPUT);
+    pinMode(LED_PIN1, OUTPUT);
     
     server.on("/on", []() {
       handleRoot(1);
