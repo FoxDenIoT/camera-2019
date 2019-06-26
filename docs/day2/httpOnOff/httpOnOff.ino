@@ -1,5 +1,10 @@
 #include <Arduino.h>
 String ip;
+#include "SSD1306.h"
+#include "OLEDDisplayUi.h"
+#define SSD1306_ADDRESS 0x3c
+SSD1306 oled(SSD1306_ADDRESS, 21, 22);
+OLEDDisplayUi ui(&oled);
 
 char * HOSTNAME = "test";
 char * WifiPASS = "";
