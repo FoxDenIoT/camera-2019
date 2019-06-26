@@ -1,51 +1,53 @@
 #include <Arduino.h>
-
-extern "C" {
-#include "user_interface.h"
-}
-
+String ip;
 
 char * HOSTNAME = "test";
 char * WifiPASS = "";
 
-#include <ESP8266WiFi.h>
-#include <ESP8266WebServer.h>
-#include <Hash.h>
+#include <WiFi.h>
+#include <WebServer.h>
 
-
-
-ESP8266WebServer server = ESP8266WebServer(80);
+WebServer server(80);
 
 
 void setup() {
     Serial.begin(115200);
 
-    pinMode(LED_BUILTIN, OUTPUT);
-
-
-
-
-    
-
-    // Start Wifi AP
-    WiFi.mode(WIFI_AP_STA);
-    WiFi.softAP(HOSTNAME, WifiPASS);
-
+   uint8_t mac[6];
+    char buff[128];
+    WiFi.mode(WIFI_AP);
+    IPAddress apIP = IPAddress(2, 2, 2, 1);
+    WiFi.softAPConfig(apIP, apIP, IPAddress(255, 255, 255, 0));
+    sprintf(buff, "%s", HOSTNAME);
+    Serial.printf("Device AP Name:%s\n", buff);
+    if (!WiFi.softAP(buff, WifiPASS, 1, 0)) {
+        Serial.println("AP Begin Failed.");
+        while (1);
+    }
 
     
     // handle index -- HTTP Server
     
     server.on("/on", []() {
-      digitalWrite(LED_BUILTIN, 0);
+      oled.drawString(oled.getWidth() / 2, oled.getHeight() / 2, "OPEN");
+      oled.display();
       server.send(200, "");
     });
 
     server.on("/off", []() {
-      digitalWrite(LED_BUILTIN, 1);
+      oled.drawString(oled.getWidth() / 2, oled.getHeight() / 2, "CLOSE");
+      oled.display();
       server.send(200, "");
     });
  
     server.begin();
+
+    oled.init();
+    oled.setFont(ArialMT_Plain_16);
+    oled.setTextAlignment(TEXT_ALIGN_CENTER);
+    delay(50);
+    oled.drawString(oled.getWidth() / 2, oled.getHeight() / 2, "test");
+    oled.display();
     
 }
 
