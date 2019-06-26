@@ -34,12 +34,14 @@ void setup() {
     // handle index -- HTTP Server
     
     server.on("/on", []() {
+      oled.clear();
       oled.drawString(oled.getWidth() / 2, oled.getHeight() / 2, "OPEN");
       oled.display();
       server.send(200, "");
     });
 
     server.on("/off", []() {
+      oled.clear();
       oled.drawString(oled.getWidth() / 2, oled.getHeight() / 2, "CLOSE");
       oled.display();
       server.send(200, "");
