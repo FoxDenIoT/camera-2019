@@ -42,3 +42,7 @@ Provide wifi router credentials in lines 17,18
 ## Further Reading
 1. AWS Kinesis: https://aws.amazon.com/quickstart/architecture/camera-connector-onica/
 2. AWS Rekognition: https://aws.amazon.com/rekognition/
+
+## MJPEG Stream
+Available at 2.2.2.1:81/stream (AP mode) or <cam-ip>:81/stream (when connected to wifi)
+
